@@ -50,7 +50,7 @@ defmodule Chaps.JsonTest do
 
     assert(
       File.read!(report) =~
-        ~s({"source_files":[{"coverage":[0,1,null,null],"name":"test/fixtures/test.ex","source":"defmodule Test do\\n  def test do\\n  end\\nend\\n"}]})
+        ~s({"source_files":[{"name":"test/fixtures/test.ex","source":"defmodule Test do\\n  def test do\\n  end\\nend\\n","coverage":[0,1,null,null]}]})
     )
 
     %{size: size} = File.stat!(report)
@@ -64,7 +64,7 @@ defmodule Chaps.JsonTest do
 
     assert(
       File.read!(report) =~
-        ~s({"source_files":[{"coverage":[0,1,null,null],"name":"test/fixtures/test.ex","source":"defmodule Test do\\n  def test do\\n  end\\nend\\n"}]})
+        ~s({"source_files":[{"name":"test/fixtures/test.ex","source":"defmodule Test do\\n  def test do\\n  end\\nend\\n","coverage":[0,1,null,null]}]})
     )
 
     %{size: size} = File.stat!(report)
