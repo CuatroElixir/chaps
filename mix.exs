@@ -1,7 +1,7 @@
 defmodule Chaps.Mixfile do
   use Mix.Project
 
-  @source_url "https://github.com/NFIBrokerage/chaps"
+  @source_url "https://github.com/CuatroElixir/chaps"
   @version_file Path.join(__DIR__, ".version")
   @external_resource @version_file
   @version (case Regex.run(~r/^v([\d\.\w-]+)/, File.read!(@version_file),
